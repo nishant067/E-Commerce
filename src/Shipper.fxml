@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Shipper_Controller">
+   <children>
+      <AnchorPane fx:id="login_screen" prefHeight="600.0" prefWidth="800.0" visible="false">
+         <children>
+            <Label layoutX="383.0" layoutY="31.0" text="Login">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="136.0" layoutY="120.0" text="UserId">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="165.0" text="Password">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="shid" layoutX="273.0" layoutY="120.0" />
+            <Button fx:id="login" layoutX="549.0" layoutY="120.0" mnemonicParsing="false" text="Login" />
+            <Label fx:id="log_er" layoutX="639.0" layoutY="147.0" text="Invalid" textFill="#d70f0f" visible="false" />
+            <Label layoutX="119.0" layoutY="290.0" text="UserId" />
+            <TextField fx:id="sshid" layoutX="283.0" layoutY="285.0" />
+            <Label layoutX="113.0" layoutY="338.0" text="Password" />
+            <Label layoutX="121.0" layoutY="382.0" text="Name" />
+            <Label layoutX="119.0" layoutY="420.0" text="Contact" />
+            <Label layoutX="123.0" layoutY="465.0" text="Speed" />
+            <Label layoutX="129.0" layoutY="507.0" text="Cost" />
+            <Label layoutX="120.0" layoutY="553.0" text="Liability" />
+            <TextField fx:id="sshpwd" layoutX="283.0" layoutY="333.0" />
+            <TextField fx:id="shname" layoutX="283.0" layoutY="377.0" />
+            <TextField fx:id="shcn" layoutX="283.0" layoutY="415.0" />
+            <ComboBox fx:id="speed" layoutX="292.0" layoutY="460.0" prefWidth="150.0" />
+            <TextField fx:id="cost" layoutX="273.0" layoutY="502.0" promptText="\% of product price" />
+            <TextField fx:id="lia" layoutX="273.0" layoutY="548.0" promptText="\% of product price" />
+            <Button fx:id="signup" layoutX="511.0" layoutY="415.0" mnemonicParsing="false" text="SignUp" />
+            <Label fx:id="up_er" layoutX="607.0" layoutY="420.0" text="UserID not available" textFill="#eb1e1e" visible="false" />
+            <Label fx:id="up_cr" layoutX="609.0" layoutY="420.0" text="Created Successfully!!!" textFill="#2ec317" visible="false" />
+            <Label layoutX="498.0" layoutY="553.0" text="Working Days" />
+            <ComboBox fx:id="work" layoutX="599.0" layoutY="548.0" prefWidth="150.0" />
+            <PasswordField fx:id="shpwd" layoutX="273.0" layoutY="165.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="welcome_screen" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="up_order" prefHeight="378.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="222.0">
+              <columns>
+                <TableColumn fx:id="OrderID" prefWidth="267.0" text="Order ID" />
+                <TableColumn fx:id="Product" prefWidth="210.0" text="Product" />
+                  <TableColumn fx:id="Status" prefWidth="322.0" text="Status" />
+              </columns>
+            </TableView>
+            <Label layoutX="290.0" layoutY="19.0" text="Update Order Status">
+               <font>
+                  <Font name="BebasNeue" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="91.0" text="Order ID">
+               <font>
+                  <Font name="BebasNeue" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="oid" layoutX="141.0" layoutY="94.0" />
+            <ComboBox fx:id="stat2" layoutX="321.0" layoutY="94.0" prefWidth="150.0" />
+            <Button fx:id="go" layoutX="501.0" layoutY="94.0" mnemonicParsing="false" text="GO" />
+            <Button fx:id="logout" layoutX="732.0" layoutY="28.0" mnemonicParsing="false" text="Logout" />
+            <Label fx:id="go_er" layoutX="525.0" layoutY="165.0" text="Enter Valid Order ID!!!" textFill="#ee1111" visible="false" />
+            <Label fx:id="go_cr" layoutX="518.0" layoutY="165.0" text="Order Updated Successfully!!!" textFill="#3beb1c" visible="false" />
+            <Label layoutX="38.0" layoutY="159.0" text="Total Revenue :">
+               <font>
+                  <Font name="BebasNeue" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="balance" layoutX="492.0" layoutY="162.0" mnemonicParsing="false" text="Update" />
+            <Label fx:id="shipper_bal" layoutX="165.0" layoutY="159.0" text="0.0">
+               <font>
+                  <Font name="BebasNeue" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

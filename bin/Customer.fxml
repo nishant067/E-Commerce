@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="595.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer_Controller">
+   <children>
+      <AnchorPane fx:id="my_cart" layoutY="2.0" prefHeight="595.0" prefWidth="701.0" visible="false">
+         <children>
+            <Button fx:id="logout" layoutX="623.0" layoutY="14.0" mnemonicParsing="false" text="Logout" />
+            <TableView fx:id="cus_table" layoutY="350.0" prefHeight="245.0" prefWidth="702.0">
+              <columns>
+                <TableColumn fx:id="cusid" prefWidth="91.0" text="Product ID" />
+                <TableColumn fx:id="cusname" prefWidth="197.0" text="Product Name" />
+                  <TableColumn fx:id="cusp" prefWidth="77.0" text="Price" />
+                  <TableColumn fx:id="cusd" prefWidth="88.0" text="Shipper" />
+                  <TableColumn fx:id="cuss" minWidth="0.0" prefWidth="95.0" text="Seller" />
+                  <TableColumn fx:id="cata" prefWidth="75.0" text="Category" />
+                  <TableColumn fx:id="speed" prefWidth="78.0" text="Speed" />
+              </columns>
+            </TableView>
+            <Text layoutX="11.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Cart">
+               <font>
+                  <Font name="Bebas" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="pname" layoutX="202.0" layoutY="60.0" />
+            <TextField fx:id="rlow" layoutX="202.0" layoutY="106.0" />
+            <TextField fx:id="rhigh" layoutX="412.0" layoutY="106.0" />
+            <Text layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" />
+            <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price Range" />
+            <Text layoutX="14.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category" />
+            <Text layoutX="377.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="to" />
+            <Button fx:id="sn" layoutX="624.0" layoutY="60.0" mnemonicParsing="false" text="Search" />
+            <Button fx:id="buy" layoutX="473.0" layoutY="298.0" mnemonicParsing="false" text="Buy" />
+            <TextField fx:id="pid" layoutX="277.0" layoutY="298.0" />
+            <Text layoutX="14.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" />
+            <ComboBox fx:id="catg" layoutX="202.0" layoutY="148.0" prefWidth="150.0" />
+            <Button fx:id="spr" layoutX="625.0" layoutY="108.0" mnemonicParsing="false" text="Search" />
+            <Button fx:id="scg" layoutX="627.0" layoutY="146.0" mnemonicParsing="false" text="Search" />
+            <Button fx:id="track" layoutX="576.0" layoutY="298.0" mnemonicParsing="false" text="Track Orders" />
+            <Label fx:id="buy_er" layoutX="456.0" layoutY="259.0" text="Plese select valid product!!!" textFill="#da2c2c" visible="false" />
+            <Label fx:id="buy_cr" layoutX="464.0" layoutY="259.0" text="Thank Your For Purchasing" textFill="#20da55" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="login_page" layoutY="2.0" prefHeight="595.0" prefWidth="701.0">
+         <children>
+            <Text layoutX="272.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Login">
+               <font>
+                  <Font name="Bebas" size="21.0" />
+               </font>
+            </Text>
+            <TextField fx:id="user" layoutX="428.0" layoutY="74.0" />
+            <PasswordField fx:id="pwd" layoutX="428.0" layoutY="108.0" />
+            <Text layoutX="170.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
+            <Text layoutX="170.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Button fx:id="log" layoutX="324.0" layoutY="134.0" mnemonicParsing="false" text="Login" />
+            <Separator layoutX="1.0" layoutY="188.0" prefHeight="0.0" prefWidth="701.0" />
+            <Label layoutX="320.0" layoutY="198.0" text="New User">
+               <font>
+                  <Font name="Bebas" size="13.0" />
+               </font>
+            </Label>
+            <Text layoutX="173.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="173.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
+            <PasswordField fx:id="npwd" layoutX="431.0" layoutY="276.0" />
+            <TextField fx:id="nuser" layoutX="431.0" layoutY="242.0" />
+            <TextField fx:id="name" layoutX="431.0" layoutY="311.0" />
+            <TextField fx:id="cno" layoutX="431.0" layoutY="346.0" />
+            <TextField fx:id="ads" layoutX="431.0" layoutY="381.0" />
+            <Text layoutX="173.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <Text layoutX="173.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact No." />
+            <Text layoutX="174.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+            <Button fx:id="sign" layoutX="321.0" layoutY="441.0" mnemonicParsing="false" text="Sign Up" />
+            <Text fx:id="fail" fill="RED" layoutX="286.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Not Successfull !" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="track_pane" layoutX="1.0" layoutY="1.0" prefHeight="597.0" prefWidth="701.0" visible="false">
+         <children>
+            <Text layoutX="11.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track Order">
+               <font>
+                  <Font name="Bebas" size="20.0" />
+               </font>
+            </Text>
+            <TableView fx:id="track_table" layoutY="160.0" prefHeight="437.0" prefWidth="701.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0">
+              <columns>
+                <TableColumn fx:id="Product" prefWidth="219.0" text="Product" />
+                <TableColumn fx:id="Shipper" prefWidth="248.0" text="Shipper" />
+                  <TableColumn fx:id="Status" prefWidth="233.0" text="Status" />
+              </columns>
+            </TableView>
+            <Button fx:id="back" layoutX="600.0" layoutY="23.0" mnemonicParsing="false" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
